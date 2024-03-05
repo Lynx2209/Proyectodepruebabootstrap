@@ -5,6 +5,10 @@
 
 
 /*index.html*/
+body {
+	background-color: #fff;
+}
+
 * {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -13,7 +17,7 @@
 	padding: 15px;
 	background-color: white;
 	box-shadow: 0px 0px 10px rgb(0, 0, 0);
-	background-image: url(imagenes/cabecera.png);
+	background-image: url(imagenes/patron-cabecera.png);
 	background-position: 0px -20px;
 }
 
@@ -69,7 +73,480 @@
 	color: black;
 	text-align: center;
 }
-.lista-derecha-enlaces:hover{
+
+.lista-derecha-enlaces:hover {
 	transition: 200ms;
-	color: #fb090b;
+	color: rgba(251, 9, 11);
+}
+
+/* carousel */
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+.carousel-arriba {
+	margin-top: 150px;
+}
+
+.slides {
+	padding: 0;
+	width: 609px;
+	height: 420px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+.slides * {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.slides input {
+	display: none;
+}
+
+.slide-container {
+	display: block;
+}
+
+.slide {
+	top: 0;
+	opacity: 0;
+	width: 609px;
+	height: 420px;
+	display: block;
+	position: absolute;
+
+	transform: scale(0);
+
+	transition: all .7s ease-in-out;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+
+.nav label {
+	width: 200px;
+	height: 100%;
+	display: none;
+	position: absolute;
+
+	opacity: 0;
+	z-index: 9;
+	cursor: pointer;
+
+	transition: opacity .2s;
+
+	color: #FFF;
+	font-size: 156pt;
+	text-align: center;
+	line-height: 380px;
+	font-family: "Varela Round", sans-serif;
+	background-color: rgba(255, 255, 255, .3);
+	text-shadow: 0px 0px 15px rgba(255, 255, 255);
+}
+
+.slide:hover+.nav label {
+	opacity: 0.5;
+}
+
+.nav label:hover {
+	opacity: 1;
+}
+
+.nav .next {
+	right: 0;
+}
+
+input:checked+.slide-container .slide {
+	opacity: 1;
+
+	transform: scale(1);
+
+	transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slide-container .nav label {
+	display: block;
+}
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(255, 255, 255);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255);
+}
+
+input#img-1:checked~.nav-dots label#img-dot-1,
+input#img-2:checked~.nav-dots label#img-dot-2,
+input#img-3:checked~.nav-dots label#img-dot-3,
+input#img-4:checked~.nav-dots label#img-dot-4,
+input#img-5:checked~.nav-dots label#img-dot-5,
+input#img-6:checked~.nav-dots label#img-dot-6 {
+	background: rgba(255, 255, 255);
+}
+
+/* carousel FIN */
+.objetos-tienda1 {
+	width: 200px;
+	height: 200px;
+	background-image: url(https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/92f4721437b24485b445aea6010e7c2a_9366/Camiseta_primera_equipacion_Espana_22_Rojo_HL1970_21_model.jpg);
+	background-size: 200px 200px;
+}
+
+.objetos-tienda2 {
+	width: 200px;
+	height: 200px;
+	background-image: url(https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/65060667cb3441dc93c24a3d02d64af7_9366/Zapatilla_Gazelle_Espana_Burgundy_ID3724_02_standard_hover.jpg);
+	background-size: 200px 200px;
+}
+
+.objetos-tienda3 {
+	width: 200px;
+	height: 200px;
+	background-size: 200px 200px;
+	background-image: url(https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3458208e06b345eba03daf9d0103452d_9366/Bolso_Espana_Azul_HS8878_02_standard.jpg);
+}
+
+
+/* PERFIL.HTML */
+.imagen-perfil {
+	height: 150px;
+}
+
+.container {
+	margin: 0 auto;
+	display: table;
+}
+
+.left {
+	float: left;
+	width: 214px;
+	height: 366px;
+}
+
+.right {
+	float: right;
+	display: table;
+	width: 60%;
+}
+
+.fa {
+	display: inline-block;
+}
+
+.image {
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 1px solid gray;
+	display: inline-block;
+	padding: 3px;
+	border: 3px solid #d2d6de;
+	margin-top: 20px;
+	margin-right: 57px;
+	margin-left: 57px;
+
+}
+
+.has-feedback .form-control {
+	padding-right: 42.5px;
+}
+
+select[multiple],
+select[size] {
+	height: auto;
+}
+
+.form-control {
+	border-radius: 0;
+	box-shadow: none;
+	border-color: #d2d6de;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+}
+
+label {
+	cursor: default;
+}
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: 700;
+}
+
+.usuername {
+	font-size: 21px;
+	margin-top: 5px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.btn {
+	margin: 0 auto;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	margin-top: 100px;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: rgba(251, 9, 11);
+	display: block;
+}
+
+.control-label {
+	float: left;
+}
+
+.form-horizontal .form-group {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.btn-submit {
+	background-color: #dd4b39;
+	border-color: red;
+}
+
+.btn {
+	border-radius: 3px;
+	box-shadow: none;
+	border: 1px solid transparent;
+}
+
+.has-feedback {
+	position: relative;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.left.box-primary {
+	border-top-color: rgba(251, 9, 11);
+
+}
+
+.left {
+	position: relative;
+	border-radius: 3px;
+	background: #ffffff;
+	border-top: 3px solid #d2d6de;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	padding: 10px;
+}
+
+button,
+meter,
+progress {
+	-webkit-writing-mode: horizontal-tb;
+}
+
+
+
+/*Pagina de cupones */
+
+
+.cupones-titulo {
+	margin-top: 150px;
+	color: black;
+	text-align: center;
+}
+
+.rojo-cupones {
+	color: red;
+}
+
+/*Pagina cesta*/
+#container {
+	position: relative;
+	margin: auto;
+	margin-top: 100px;
+	padding: 4%;
+	display: flex;
+	font-family: "Arial";
+	color: #90A4AE;
+}
+
+.cesta-titulo {
+	margin-top: 150px;
+	color: black;
+	text-align: center;
+}
+
+#product {
+	background-color: white;
+	width: 270px;
+	padding: 20px;
+	margin-left: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index: 10;
+}
+
+#bulb {
+	text-align: center;
+}
+
+#product img {
+	width: 200px;
+}
+
+#product h1 {
+	text-align: center;
+	margin: 0;
+	font-size: 20px;
+}
+
+#price {
+	display: flex;
+	width: 100%;
+}
+
+#quantity {
+	width: 50%;
+	padding: 0;
+}
+
+#quantity h2 {
+	margin: 0;
+	font-size: 15px;
+}
+
+#dollar {
+	text-align: right;
+	width: 50%;
+	color: #1976D2;
+}
+
+#dollar h2 {
+	margin: 0;
+	font-size: 25px;
+}
+
+/*------------------------------------------------*/
+
+#card {
+	background: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 220px;
+	height: 230px;
+	margin-right: auto;
+	margin-top: 3.5%;
+	padding: 20px;
+}
+
+#card img {
+	width: 50px;
+	filter: grayscale(100%) opacity(50%);
+	display: block;
+	margin-left: 70%;
+}
+
+#data {
+	width: 100%;
+	padding: 0;
+	align-content: center;
+	margin: auto;
+}
+
+.title {
+	margin-bottom: 0px;
+	font-size: 9px;
+}
+
+.camp {
+	border: none;
+	border-bottom: 1px solid #CFD8DC;
+	width: 90%;
+	font-size: 20px;
+	margin-top: 0;
+	margin-bottom: 5px;
+	padding: 4px;
+	color: #90A4AE;
+	;
+}
+
+#security {
+	display: flex;
+}
+
+.security {
+	width: 40%;
+	margin-left: 5%;
+}
+
+#pay {
+	background: #66BB6A;
+	color: white;
+	border: none;
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+	padding: 7px 30px 7px 30px;
+	margin-top: 20px;
+	margin-left: 25%;
+	border-radius: 25px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#pay:hover {
+	color: #558B2F;
+	cursor: pointer;
 }
